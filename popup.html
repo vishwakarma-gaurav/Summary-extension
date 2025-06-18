@@ -2,6 +2,8 @@
   <head>
     <style>
       body.main-body {
+        width: 500px;
+        height: auto;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f9fafb;
         padding: 16px;
@@ -35,8 +37,6 @@
       }
 
       button#askBtn {
-        margin: 20px 20px;
-        margin-left: 0px;
         padding: 10px 16px;
         background-color: #3b82f6;
         color: white;
@@ -48,7 +48,7 @@
       }
 
       button#askBtn:hover {
-        background-color: #043397;
+        background-color: #2563eb;
       }
 
       #answer {
@@ -66,9 +66,19 @@
   <body class="main-body">
     <div id="app" class="main-cont" style="display: none;">
       <textarea id="question" class="text-answer" placeholder="Ask a question..."></textarea>
-      <button id="askBtn">Send request</button>
-      <div id="answer" >Answer will appear here...</div>
+      
+      <select id="formatSelect">
+        <option value="paragraph">Paragraph</option>
+        <option value="list">List</option>
+        <option value="table">Tabular</option>
+      </select>
+
+      <button id="askBtn">Send Request</button>
+      
+      <div id="answer">Answer will appear here...</div>
+      <button id="copyBtn" style="display: none;">Copy</button>
     </div>
+
     <script src="popup.js"></script>
   </body>
 </html>
